@@ -246,6 +246,9 @@ print(ct1.round(2))
 # normalize=, convert those counts from corsstab into proportions or percentages.
 # ---------------------------------------------------------------
  
+#5.2 Crosstab 2 — Freedom group × Income group
+ct2 = pd.crosstab(data["Freedom group"], data["Income group"], normalize="columns")
+print(ct2.round(2))
 
 
 
