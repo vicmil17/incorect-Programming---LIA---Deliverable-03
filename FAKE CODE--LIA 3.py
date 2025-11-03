@@ -58,6 +58,14 @@ data = data.drop_duplicates()
 # .fillna(...) replaces any NaN (missing) cells in the dataset 
 # with the values you specify.
 # ---------------------------------------------------------------
+# JUSTIFICATION
+    # Dropping rows would eliminate countries 
+    # that are still valuable for broader global comparisons.
+    # Filling numeric gaps with the mean preserves 
+    # dataset size while maintaining reasonable averages.
+    # Replacing missing text data with “Unknown” avoids 
+    # blank cells and clarifies which values were originally absent.
+# ---------------------------------------------------------------
 
 # Check for missing values in each column
 print(data.isnull().sum())
