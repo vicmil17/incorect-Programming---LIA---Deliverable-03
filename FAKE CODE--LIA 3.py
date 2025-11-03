@@ -133,6 +133,7 @@ print("Kurtosis:\n",  data.kurt(numeric_only=True))
 # Slight left skew (longer tail on the lower end).
 # No extreme outliers; most countries fall between 4 and 7.
 # The median and mean are close, confirming near symmetry.
+# ---------------------------------------------------------------
 
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -143,7 +144,16 @@ plt.xlabel("Ladder Score")
 plt.ylabel("Number of Countries")
 plt.show()
 
+# ---------------------------------------------------------------
+# b) Normalized Histogram + KDE
+# ---------------------------------------------------------------
+# INTERPRETATION
 
+sns.histplot(data=data, x="Logged GDP per capita", bins=15, kde=True, stat="density", color="lightgreen")
+plt.title("Distribution of Logged GDP per Capita")
+plt.xlabel("Logged GDP per Capita")
+plt.ylabel("Density")
+plt.show()
 
 
 
