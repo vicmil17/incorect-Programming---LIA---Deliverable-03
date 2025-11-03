@@ -147,7 +147,10 @@ plt.show()
 # ---------------------------------------------------------------
 # b) Normalized Histogram + KDE
 # ---------------------------------------------------------------
-# INTERPRETATION
+# THOUGHT PROCESS 
+# stat="density" normalizes the histogram so the total area = 1.
+# The KDE curve overlays to show probability density.
+# ---------------------------------------------------------------
 
 sns.histplot(data=data, x="Logged GDP per capita", bins=15, kde=True, stat="density", color="lightgreen")
 plt.title("Distribution of Logged GDP per Capita")
@@ -155,8 +158,18 @@ plt.xlabel("Logged GDP per Capita")
 plt.ylabel("Density")
 plt.show()
 
+# ---------------------------------------------------------------
+# c) Conditioning by Region + Dodge Bars
+# ---------------------------------------------------------------
+# THOUGHT PROCESS 
+# multiple="dodge" → creates separate side-by-side bars per region
+# ---------------------------------------------------------------
 
-
+sns.histplot(data=data, x="Freedom to make life choices", hue="Regional indicator", multiple="dodge", bins=10)
+plt.title("Freedom to Make Life Choices by Region")
+plt.xlabel("Freedom (0–1)")
+plt.ylabel("Count")
+plt.show()
 
 
 
