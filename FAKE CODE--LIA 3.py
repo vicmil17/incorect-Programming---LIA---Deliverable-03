@@ -342,9 +342,20 @@ plt.show()
 sns.stripplot(data=data, x="Freedom to make life choices", y="Ladder score", jitter=False)
 plt.title("Happiness vs Freedom (No Jitter)")
 plt.show()
+# ---------------------------------------------------------------
+# THOUGHT PROCESS 
+# Why jitter=False: Freedom scores are already continuous and well-spaced; jitter would mislead visually.
+# ---------------------------------------------------------------
 
-
-
+    # (c) Beeswarm plot (3 variables)
+sns.swarmplot(data=data, x="Regional indicator", y="Ladder score", hue="Freedom to make life choices")
+plt.title("Happiness by Region and Freedom")
+plt.xticks(rotation=45)
+plt.show()
+# ---------------------------------------------------------------
+# THOUGHT PROCESS 
+# swarmplot() = smart jitter (prevents overlap completely)
+# ---------------------------------------------------------------
 
 
 
