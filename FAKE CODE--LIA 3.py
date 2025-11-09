@@ -345,6 +345,7 @@ plt.show()
 # ---------------------------------------------------------------
 # THOUGHT PROCESS 
 # Why jitter=False: Freedom scores are already continuous and well-spaced; jitter would mislead visually.
+# jitter = Randomly move the points slightly along the categorical axis so that they don’t overlap.
 # ---------------------------------------------------------------
 
     # (c) Beeswarm plot (3 variables)
